@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="Ticket price for Museum, with JS" />
     <meta name="keywords" content="mths, icd2o" />
     <meta name="author" content="Ain Jeong" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket price for Museum, with JS</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -13,7 +14,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.purple-pink.min.css"
+      href="https://code.getmdl.io/1.3.0/material.blue-deep_purple.min.css"
     />
     <link
       rel="apple-touch-icon"
@@ -33,12 +34,11 @@
       href="./favicon-16x16.png"
     />
     <link rel="manifest" href="site.webmanifest" />
-    <title>Ticket price for Museum, with JS</title>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -66,45 +66,24 @@
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
-        <div class="page-content-guide">
-          Please select what day it is today
-        </div>
-        <form>
-          <div class="page-content">
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-monday">
-              <input type="radio" id="option-monday" class="mdl-radio__button" name="kind-of-day" value="1" />
-              <span class="mdl-radio__label">Monday</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-tuesday">
-              <input type="radio" id="option-tuesday" class="mdl-radio__button" name="kind-of-day" value="2" />
-              <span class="mdl-radio__label">Tuesday</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-wednesday">
-              <input type="radio" id="option-wednesday" class="mdl-radio__button" name="kind-of-day" value="3" />
-              <span class="mdl-radio__label">Wednesday</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-thursday">
-              <input type="radio" id="option-thursday" class="mdl-radio__button" name="kind-of-day" value="4" />
-              <span class="mdl-radio__label">Thursday</span>
-            </label>
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-friday">
-                          <input type="radio" id="option-friday" class="mdl-radio__button" name="kind-of-day" value="5" />
-                          <span class="mdl-radio__label">Friday</span>
-                        </label>
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-saturday">
-                          <input type="radio" id="option-saturday" class="mdl-radio__button" name="kind-of-day" value="6" />
-                          <span class="mdl-radio__label">Saturday</span>
-                        </label>
-                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-sunday">
-                          <input type="radio" id="option-sunday" class="mdl-radio__button" name="kind-of-day" value="7" />
-                          <span class="mdl-radio__label">Sunday</span>
-                        </label>
-                        <br />
-                        </div>
-          <!-- Accent-colored raised button with ripple -->
+          <div class="page-content-guide">
+            Please select what day it is today
+          </div>
+          <div class="mdl-textfield mdl-js-textfield">
+            <select class="mdl-textfield__input" id="day">
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+          </div>
+          <br />
           <button
             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="checkPrice ()"
+            onclick="checkPrice()"
             type="button"
           >
             Check
