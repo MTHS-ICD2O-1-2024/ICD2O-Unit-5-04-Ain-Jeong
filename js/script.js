@@ -10,20 +10,20 @@
 // eslint-disable-next-line no-unused-vars
 function checkPrice() {
   // input
-  const userAge = parseFloat(document.getElementById("user-age").value)
-  const day = document.getElementById("day").value
+  const userAge = parseFloat(document.getElementById('user-age').value)
+  const day = document.getElementById('day').value
 
   // process
   if (
     (userAge <= 21 && userAge >= 12) ||
-    day === "tuesday" ||
-    day === "thursday"
+    day === 'tuesday' ||
+    day === 'thursday'
   ) {
     // output
-    document.getElementById("answer").innerHTML =
-      "You are eligible for the student pricing!"
+    document.getElementById('answer').innerHTML =
+      'You are eligible for the student pricing!'
   } else {
     // output
-    document.getElementById("answer").innerHTML = "You must pay regular price."
+    document.getElementById('answer').innerHTML = 'You must pay regular price.'
   }
 }
